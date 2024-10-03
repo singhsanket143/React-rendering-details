@@ -8,8 +8,8 @@ const waitingForSomething = (ms) => {
     }
 }
 
-export default function SlowComponent({ time, custom, x }) {
-    waitingForSomething(time[0]);
-    custom();
-    return <>hello {x}</>;
+export default function AnotherSlowComponent({ children }) {
+    waitingForSomething(1000);
+    
+    return <>hello {children}</>;
 }
